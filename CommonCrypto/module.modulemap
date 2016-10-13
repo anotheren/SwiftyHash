@@ -1,0 +1,7 @@
+module CommonCrypto {
+  header "/usr/include/CommonCrypto/CommonCrypto.h"
+  export *
+}
+
+// 如果编译时提示无法找到 "/usr/include/CommonCrypto/CommonCrypto.h" 头文件
+// 请在终端中运行 `xcode-select --install` 来部署 Xcode Command Line Tools
