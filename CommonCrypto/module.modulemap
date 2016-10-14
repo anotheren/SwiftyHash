@@ -3,5 +3,5 @@ module CommonCrypto {
   export *
 }
 
-// 如果编译时提示无法找到 "/usr/include/CommonCrypto/CommonCrypto.h" 头文件
-// 请在终端中运行 `xcode-select --install` 来部署 Xcode Command Line Tools
+// if Xcode warn you that can't find "/usr/include/CommonCrypto/CommonCrypto.h"
+// please run `xcode-select --install` in Terminal to install Xcode Command Line Tools

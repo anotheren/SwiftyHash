@@ -9,7 +9,7 @@
 import Foundation
 import CommonCrypto
 
-/// Hash 算法类别
+/// Hash Algorithm Type
 internal enum HashType {
     
     case md2
@@ -38,13 +38,6 @@ internal enum HashType {
 
 extension HashType {
     
-    /**
-     计算 Hash
-     
-     - Note:    Hash
-     - parameter data: 需要求 Hash 的文件
-     - returns: Hash 结果
-     */
     internal func array(_ data: inout Data) -> [UInt8] {
         var hash = [UInt8](repeating: 0, count: digestLength)
         switch self {
@@ -67,14 +60,7 @@ extension HashType {
         }
         return hash
     }
-    
-    /**
-     生成 Hash 字符串
-     
-     - Note: 常见的 Hash 十六进制字符串表示, 与 Array<UInt8> 的对象可相互转化
-     - parameter hashArray: 待编码的 hashArray
-     - returns: Hash 字符串
-     */
+
     internal func string(_ hashArray: [UInt8]) -> String {
         var string = ""
         for i in 0..<digestLength {
@@ -83,13 +69,6 @@ extension HashType {
         return string
     }
     
-    /**
-     生成 hash 字符串
-     
-     - Note: 常见的 hash 十六进制字符串表示, 与 Array<UInt8> 的对象可相互转化
-     - parameter hashData: 待编码的 hashData
-     - returns: hash 字符串
-     */
     internal func string(_ hashData: inout Data) -> String {
         return string(array(&hashData))
     }

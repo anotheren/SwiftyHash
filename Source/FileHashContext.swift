@@ -11,26 +11,26 @@ import CommonCrypto
 
 internal struct FileHashContext {
     
-    /// 每次读取的数据长度 4096 字节
+    /// The Bytes length of the data to read each time
     private let sizeForReadingData: Int = 4096
     
-    /// 计算文件 Hash
+    /// Calculates the file hash string
     ///
-    /// - parameter type:     Hash 算法类别
-    /// - parameter filePath: 文件路径
+    /// - parameter type:     HashType
+    /// - parameter filePath: file path
     ///
-    /// - returns: Hash 字符串
+    /// - returns: hash string
     internal func string(_ type: HashType, path filePath: String) -> String? {
         guard let array: Array<UInt8> = array(type, path: filePath) else { return nil }
         return type.string(array)
     }
     
-    /// 计算文件 Hash
+    /// Calculates the file hash hash object
     ///
-    /// - parameter type:     Hash 算法类别
-    /// - parameter filePath: 文件路径
+    /// - parameter type:     HashType
+    /// - parameter filePath: file path
     ///
-    /// - returns: Hash
+    /// - returns: hash object
     internal func array(_ type: HashType, path filePath: String) -> Array<UInt8>? {
         guard
             FileManager.default.fileExists(atPath: filePath),
@@ -66,12 +66,12 @@ internal struct FileHashContext {
         return didSuccess ? digest : nil
     }
     
-    /// 计算文件的 md2
+    /// Calculates the file‘s md2
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileMD2(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_MD2_CTX()
         CC_MD2_Init(&hashObject)
@@ -92,12 +92,12 @@ internal struct FileHashContext {
         return true
     }
     
-    /// 计算文件的 md4
+    /// Calculates the file‘s md4
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileMD4(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_MD4_CTX()
         CC_MD4_Init(&hashObject)
@@ -118,12 +118,12 @@ internal struct FileHashContext {
         return true
     }
     
-    /// 计算文件的 md5
+    /// Calculates the file‘s md5
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileMD5(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_MD5_CTX()
         CC_MD5_Init(&hashObject)
@@ -144,12 +144,12 @@ internal struct FileHashContext {
         return true
     }
     
-    /// 计算文件的 sha1
+    /// Calculates the file‘s sha1
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileSHA1(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_SHA1_CTX()
         CC_SHA1_Init(&hashObject)
@@ -170,12 +170,12 @@ internal struct FileHashContext {
         return true
     }
     
-    /// 计算文件的 sha224
+    /// Calculates the file‘s sha224
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileSHA224(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_SHA256_CTX() // same context struct is used for SHA224 and SHA256
         CC_SHA224_Init(&hashObject)
@@ -196,12 +196,12 @@ internal struct FileHashContext {
         return true
     }
     
-    /// 计算文件的 sha256
+    /// Calculates the file‘s sha256
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileSHA256(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_SHA256_CTX()
         CC_SHA256_Init(&hashObject)
@@ -222,12 +222,12 @@ internal struct FileHashContext {
         return true
     }
     
-    /// 计算文件的 sha384
+    /// Calculates the file‘s sha384
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileSHA384(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_SHA512_CTX() // same context struct is used for SHA384 and SHA512
         CC_SHA384_Init(&hashObject)
@@ -248,12 +248,12 @@ internal struct FileHashContext {
         return true
     }
     
-    /// 计算文件的 sha512
+    /// Calculates the file‘s sha512
     ///
-    /// - parameter digestPointer: Hash 指针
-    /// - parameter readStream:    读取的文件流
+    /// - parameter digestPointer: hash pointer
+    /// - parameter readStream:    readable stream object
     ///
-    /// - returns: 计算是否成功
+    /// - returns: true if success
     private func hashOfFileSHA512(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
         var hashObject = CC_SHA512_CTX()
         CC_SHA512_Init(&hashObject)

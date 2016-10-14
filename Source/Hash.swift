@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// 计算 Hash
+/// Hash Object
 public class Hash {
     
     private var data: Data
@@ -17,42 +17,42 @@ public class Hash {
         self.data = data
     }
     
-    /// MD2 消息摘要算法
+    /// MD2 Message-Digest Algorithm    
     public var md2: String {
         return HashType.md2.string(&data)
     }
     
-    /// MD4 消息摘要算法
+    /// MD4 Message-Digest Algorithm
     public var md4: String {
         return HashType.md4.string(&data)
     }
     
-    /// MD5 消息摘要算法
+    /// MD5 Message-Digest Algorithm
     public var md5: String {
         return HashType.md5.string(&data)
     }
     
-    /// SHA1 安全散列算法
+    /// SHA1 Secure Hash Algorithm
     public var sha1: String {
         return HashType.sha1.string(&data)
     }
     
-    /// SHA224 安全散列算法
+    /// SHA224 Secure Hash Algorithm
     public var sha224: String {
         return HashType.sha224.string(&data)
     }
     
-    /// SHA256 安全散列算法
+    /// SHA256 Secure Hash Algorithm
     public var sha256: String {
         return HashType.sha256.string(&data)
     }
     
-    /// SHA384 安全散列算法
+    /// SHA384 Secure Hash Algorithm
     public var sha384: String {
         return HashType.sha384.string(&data)
     }
     
-    /// SHA512 安全散列算法
+    /// SHA512 Secure Hash Algorithm
     public var sha512: String {
         return HashType.sha512.string(&data)
     }
@@ -60,7 +60,7 @@ public class Hash {
 
 extension Data {
     
-    /// 内存对象 Hash
+    /// Hash Object, initiate by data itself
     public var hash: Hash {
         return Hash(data: self)
     }
@@ -68,7 +68,7 @@ extension Data {
 
 extension String {
     
-    /// 内存对象 Hash, 如非 UTF8 字符请先转换
+    /// Hash Object, please encoding by utf8
     public var hash: Hash {
         let hashData = data(using: String.Encoding.utf8) ?? Data()
         return Hash(data: hashData)
