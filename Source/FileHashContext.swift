@@ -44,10 +44,6 @@ internal struct FileHashContext {
         var digest = Array<UInt8>(repeating: 0, count: type.digestLength)
         let didSuccess: Bool
         switch type {
-        case .md2:
-            didSuccess = hashOfFileMD2(pointer: &digest, stream: readStream)
-        case .md4:
-            didSuccess = hashOfFileMD4(pointer: &digest, stream: readStream)
         case .md5:
             didSuccess = hashOfFileMD5(pointer: &digest, stream: readStream)
         case .sha1:
@@ -64,58 +60,6 @@ internal struct FileHashContext {
         CFReadStreamClose(readStream)
         
         return didSuccess ? digest : nil
-    }
-    
-    /// Calculates the file‘s md2
-    ///
-    /// - parameter digestPointer: hash pointer
-    /// - parameter readStream:    readable stream object
-    ///
-    /// - returns: true if success
-    private func hashOfFileMD2(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
-        var hashObject = CC_MD2_CTX()
-        CC_MD2_Init(&hashObject)
-        var hasMoreData = true
-        while hasMoreData {
-            var buffer = Array<UInt8>(repeating: 0, count: sizeForReadingData)
-            let readBytesCount = CFReadStreamRead(readStream, &buffer, sizeForReadingData)
-            if readBytesCount == -1 {
-                break
-            } else if readBytesCount == 0 {
-                hasMoreData = false
-            } else {
-                CC_MD2_Update(&hashObject, &buffer, CC_LONG(readBytesCount))
-            }
-        }
-        if hasMoreData { return false }
-        CC_MD2_Final(digestPointer, &hashObject)
-        return true
-    }
-    
-    /// Calculates the file‘s md4
-    ///
-    /// - parameter digestPointer: hash pointer
-    /// - parameter readStream:    readable stream object
-    ///
-    /// - returns: true if success
-    private func hashOfFileMD4(pointer digestPointer: UnsafeMutablePointer<UInt8>, stream readStream: CFReadStream) -> Bool {
-        var hashObject = CC_MD4_CTX()
-        CC_MD4_Init(&hashObject)
-        var hasMoreData = true
-        while hasMoreData {
-            var buffer = Array<UInt8>(repeating: 0, count: sizeForReadingData)
-            let readBytesCount = CFReadStreamRead(readStream, &buffer, sizeForReadingData)
-            if readBytesCount == -1 {
-                break
-            } else if readBytesCount == 0 {
-                hasMoreData = false
-            } else {
-                CC_MD4_Update(&hashObject, &buffer, CC_LONG(readBytesCount))
-            }
-        }
-        if hasMoreData { return false }
-        CC_MD4_Final(digestPointer, &hashObject)
-        return true
     }
     
     /// Calculates the file‘s md5

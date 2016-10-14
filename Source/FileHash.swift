@@ -14,15 +14,6 @@ public struct FileHash {
     private let path: String
     private let context = FileHashContext()
     
-    /// initiate by file url
-    ///
-    /// - parameter url: file url
-    ///
-    /// - returns: FileHash Object
-    public init(url: URL) {
-        self.path = url.absoluteString
-    }
-    
     /// initiate by file path
     ///
     /// - parameter path: file path
@@ -30,16 +21,6 @@ public struct FileHash {
     /// - returns: FileHash Object
     public init(path: String) {
         self.path = path
-    }
-    
-    /// MD2 Message-Digest Algorithm
-    public var md2: String? {
-        return context.string(.md2, path: path)
-    }
-    
-    /// MD4 Message-Digest Algorithm
-    public var md4: String? {
-        return context.string(.md4, path: path)
     }
     
     /// MD5 Message-Digest Algorithm
@@ -77,7 +58,7 @@ extension URL {
     
     /// FileHash Object
     public var sFileHash: FileHash {
-        return FileHash(url: self)
+        return FileHash(path: absoluteString)
     }
 }
 
