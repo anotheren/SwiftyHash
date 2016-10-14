@@ -61,7 +61,7 @@ public class Hash {
 extension Data {
     
     /// Hash Object, initiate by data itself
-    public var hash: Hash {
+    public var sHash: Hash {
         return Hash(data: self)
     }
 }
@@ -69,7 +69,7 @@ extension Data {
 extension String {
     
     /// Hash Object, please encoding by utf8
-    public var hash: Hash {
+    public var sHash: Hash {
         let hashData = data(using: String.Encoding.utf8) ?? Data()
         return Hash(data: hashData)
     }

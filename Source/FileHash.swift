@@ -76,7 +76,7 @@ public struct FileHash {
 extension URL {
     
     /// FileHash Object
-    public var fileHash: FileHash {
+    public var sFileHash: FileHash {
         return FileHash(url: self)
     }
 }
@@ -84,7 +84,7 @@ extension URL {
 extension String {
     
     /// FileHash Object
-    public var fileHash: FileHash {
+    public var sFileHash: FileHash {
         return FileHash(path: self)
     }
 }
