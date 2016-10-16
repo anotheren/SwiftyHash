@@ -53,16 +53,16 @@ extension HashType {
         return hash
     }
 
-    internal func string(_ hashArray: [UInt8]) -> String {
+    internal func string(_ digest: [UInt8]) -> String {
         var string = ""
         for i in 0..<digestLength {
-            string += String(format: "%02x", hashArray[i])
+            string += String(format: "%02x", digest[i])
         }
         return string
     }
     
-    internal func string(_ hashData: Data) -> String {
-        return string(digest(hashData))
+    internal func string(_ data: Data) -> String {
+        return string(digest(data))
     }
 }
 
