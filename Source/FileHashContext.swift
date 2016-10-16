@@ -14,7 +14,7 @@ internal struct FileHashContext {
     /// The Bytes length of the data to read each time
     private let sizeForReadingData: Int = 4096
     
-    /// Calculates the file hash string
+    /// Calculate the file hash string
     ///
     /// - parameter type:     HashType
     /// - parameter filePath: file path
@@ -25,7 +25,7 @@ internal struct FileHashContext {
         return type.string(array)
     }
     
-    /// Calculates the file hash hash object
+    /// Calculate the file hash object
     ///
     /// - parameter type:     HashType
     /// - parameter filePath: file path
@@ -62,7 +62,7 @@ internal struct FileHashContext {
         return didSuccess ? digest : nil
     }
     
-    /// Calculates the file‘s md5
+    /// Calculate the file‘s md5
     ///
     /// - parameter digestPointer: hash pointer
     /// - parameter readStream:    readable stream object
@@ -88,7 +88,7 @@ internal struct FileHashContext {
         return true
     }
     
-    /// Calculates the file‘s sha1
+    /// Calculate the file‘s sha1
     ///
     /// - parameter digestPointer: hash pointer
     /// - parameter readStream:    readable stream object
@@ -114,7 +114,7 @@ internal struct FileHashContext {
         return true
     }
     
-    /// Calculates the file‘s sha224
+    /// Calculate the file‘s sha224
     ///
     /// - parameter digestPointer: hash pointer
     /// - parameter readStream:    readable stream object
@@ -140,7 +140,7 @@ internal struct FileHashContext {
         return true
     }
     
-    /// Calculates the file‘s sha256
+    /// Calculate the file‘s sha256
     ///
     /// - parameter digestPointer: hash pointer
     /// - parameter readStream:    readable stream object
@@ -166,7 +166,7 @@ internal struct FileHashContext {
         return true
     }
     
-    /// Calculates the file‘s sha384
+    /// Calculate the file‘s sha384
     ///
     /// - parameter digestPointer: hash pointer
     /// - parameter readStream:    readable stream object
@@ -192,7 +192,7 @@ internal struct FileHashContext {
         return true
     }
     
-    /// Calculates the file‘s sha512
+    /// Calculate the file‘s sha512
     ///
     /// - parameter digestPointer: hash pointer
     /// - parameter readStream:    readable stream object
