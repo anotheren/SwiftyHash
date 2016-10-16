@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A01B9DF51DB09F6500E895BE /* SwiftyHashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B9DF41DB09F6500E895BE /* SwiftyHashTests.swift */; };
+		A01B9DF71DB09F6500E895BE /* SwiftyHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A084FD191DAF5C5E00E38D59 /* SwiftyHash.framework */; };
+		A01B9DFE1DB0A68100E895BE /* Github.png in Resources */ = {isa = PBXBuildFile; fileRef = A01B9DFD1DB0A68100E895BE /* Github.png */; };
 		A02895BC1DAF695000D0E350 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02895BB1DAF695000D0E350 /* Hash.swift */; };
 		A084FD1E1DAF5C5E00E38D59 /* SwiftyHash.h in Headers */ = {isa = PBXBuildFile; fileRef = A084FD1C1DAF5C5E00E38D59 /* SwiftyHash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A084FD281DAF5CC400E38D59 /* FileHashContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A084FD261DAF5CC400E38D59 /* FileHashContext.swift */; };
@@ -14,7 +17,21 @@
 		A08CF8C81DAF74F9001CA0B5 /* FileHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CF8C71DAF74F9001CA0B5 /* FileHash.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A01B9DF81DB09F6500E895BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A084FD101DAF5C5D00E38D59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A084FD181DAF5C5E00E38D59;
+			remoteInfo = SwiftyHash;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A01B9DF21DB09F6500E895BE /* SwiftyHashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyHashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A01B9DF41DB09F6500E895BE /* SwiftyHashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyHashTests.swift; sourceTree = "<group>"; };
+		A01B9DF61DB09F6500E895BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01B9DFD1DB0A68100E895BE /* Github.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Github.png; sourceTree = "<group>"; };
 		A02895BB1DAF695000D0E350 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hash.swift; path = Source/Hash.swift; sourceTree = "<group>"; };
 		A084FD191DAF5C5E00E38D59 /* SwiftyHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A084FD1C1DAF5C5E00E38D59 /* SwiftyHash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyHash.h; sourceTree = "<group>"; };
@@ -27,6 +44,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A01B9DEF1DB09F6500E895BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01B9DF71DB09F6500E895BE /* SwiftyHash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A084FD151DAF5C5E00E38D59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,6 +62,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A01B9DF31DB09F6500E895BE /* SwiftyHashTests */ = {
+			isa = PBXGroup;
+			children = (
+				A01B9DFD1DB0A68100E895BE /* Github.png */,
+				A01B9DF41DB09F6500E895BE /* SwiftyHashTests.swift */,
+				A01B9DF61DB09F6500E895BE /* Info.plist */,
+			);
+			path = SwiftyHashTests;
+			sourceTree = "<group>";
+		};
 		A084FD0F1DAF5C5D00E38D59 = {
 			isa = PBXGroup;
 			children = (
@@ -44,6 +79,7 @@
 				A084FD251DAF5C7900E38D59 /* Source */,
 				A084FD241DAF5C6B00E38D59 /* CommonCrypto */,
 				A084FD1B1DAF5C5E00E38D59 /* SwiftyHash */,
+				A01B9DF31DB09F6500E895BE /* SwiftyHashTests */,
 				A084FD1A1DAF5C5E00E38D59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				A084FD191DAF5C5E00E38D59 /* SwiftyHash.framework */,
+				A01B9DF21DB09F6500E895BE /* SwiftyHashTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +135,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A01B9DF11DB09F6500E895BE /* SwiftyHashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A01B9DFC1DB09F6500E895BE /* Build configuration list for PBXNativeTarget "SwiftyHashTests" */;
+			buildPhases = (
+				A01B9DEE1DB09F6500E895BE /* Sources */,
+				A01B9DEF1DB09F6500E895BE /* Frameworks */,
+				A01B9DF01DB09F6500E895BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A01B9DF91DB09F6500E895BE /* PBXTargetDependency */,
+			);
+			name = SwiftyHashTests;
+			productName = SwiftyHashTests;
+			productReference = A01B9DF21DB09F6500E895BE /* SwiftyHashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A084FD181DAF5C5E00E38D59 /* SwiftyHash */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A084FD211DAF5C5E00E38D59 /* Build configuration list for PBXNativeTarget "SwiftyHash" */;
@@ -122,9 +177,15 @@
 		A084FD101DAF5C5D00E38D59 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = anotheren.com;
 				TargetAttributes = {
+					A01B9DF11DB09F6500E895BE = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VHE6LHRJMV;
+						ProvisioningStyle = Automatic;
+					};
 					A084FD181DAF5C5E00E38D59 = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
@@ -145,11 +206,20 @@
 			projectRoot = "";
 			targets = (
 				A084FD181DAF5C5E00E38D59 /* SwiftyHash */,
+				A01B9DF11DB09F6500E895BE /* SwiftyHashTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A01B9DF01DB09F6500E895BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01B9DFE1DB0A68100E895BE /* Github.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A084FD171DAF5C5E00E38D59 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,6 +230,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A01B9DEE1DB09F6500E895BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01B9DF51DB09F6500E895BE /* SwiftyHashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A084FD141DAF5C5E00E38D59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,7 +251,39 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A01B9DF91DB09F6500E895BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A084FD181DAF5C5E00E38D59 /* SwiftyHash */;
+			targetProxy = A01B9DF81DB09F6500E895BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A01B9DFA1DB09F6500E895BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VHE6LHRJMV;
+				INFOPLIST_FILE = SwiftyHashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.SwiftyHashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A01B9DFB1DB09F6500E895BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = VHE6LHRJMV;
+				INFOPLIST_FILE = SwiftyHashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.SwiftyHashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		A084FD1F1DAF5C5E00E38D59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -319,6 +429,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A01B9DFC1DB09F6500E895BE /* Build configuration list for PBXNativeTarget "SwiftyHashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A01B9DFA1DB09F6500E895BE /* Debug */,
+				A01B9DFB1DB09F6500E895BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A084FD131DAF5C5D00E38D59 /* Build configuration list for PBXProject "SwiftyHash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

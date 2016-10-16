@@ -51,7 +51,7 @@ public struct Hash {
 extension Data {
     
     /// Hash Object, initiate by data itself
-    public var sHash: Hash {
+    public var digest: Hash {
         return Hash(data: self)
     }
 }
@@ -59,7 +59,7 @@ extension Data {
 extension String {
     
     /// Hash Object, please encoding by utf8
-    public var sHash: Hash {
+    public var digest: Hash {
         let hashData = data(using: String.Encoding.utf8) ?? Data()
         return Hash(data: hashData)
     }
