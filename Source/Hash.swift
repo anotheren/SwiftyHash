@@ -60,7 +60,7 @@ extension String {
     
     /// Hash Object, please encoding by utf8
     public var digest: Hash {
-        let hashData = data(using: String.Encoding.utf8) ?? Data()
+        let hashData = Data(bytes: utf8.map({ $0 as UInt8 }))
         return Hash(data: hashData)
     }
 }
