@@ -34,7 +34,7 @@ internal enum HashType {
 
 extension HashType {
     
-    internal func array(_ data: Data) -> [UInt8] {
+    internal func digest(_ data: Data) -> [UInt8] {
         var hash = [UInt8](repeating: 0, count: digestLength)
         switch self {
         case .md5:
@@ -62,7 +62,7 @@ extension HashType {
     }
     
     internal func string(_ hashData: Data) -> String {
-        return string(array(hashData))
+        return string(digest(hashData))
     }
 }
 

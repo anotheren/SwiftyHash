@@ -21,7 +21,7 @@ internal struct FileHashContext {
     ///
     /// - returns: hash string
     internal func string(_ type: HashType, path filePath: String) -> String? {
-        guard let array: Array<UInt8> = array(type, path: filePath) else { return nil }
+        guard let array: Array<UInt8> = digest(type, path: filePath) else { return nil }
         return type.string(array)
     }
     
@@ -31,7 +31,7 @@ internal struct FileHashContext {
     /// - parameter filePath: file path
     ///
     /// - returns: hash object
-    internal func array(_ type: HashType, path filePath: String) -> Array<UInt8>? {
+    internal func digest(_ type: HashType, path filePath: String) -> Array<UInt8>? {
         guard
             FileManager.default.fileExists(atPath: filePath),
             let fileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, filePath as CFString, .cfurlposixPathStyle, false),
