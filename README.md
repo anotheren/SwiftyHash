@@ -21,7 +21,7 @@ SwiftyHash is a Swifty wrapper for CommonCrypto to easy use.
 
 ```swift
 let words: String = "A Swifty wrapper for CommonCrypto"
-let sha256: String = words.degist.sha256
+let sha256: String = words.digest.sha256
 ```
 
 ### For file in disk
@@ -29,7 +29,7 @@ let sha256: String = words.degist.sha256
 guard let path = Bundle.main.path(forResource: "Github", ofType: "png") else {
     fatalError("Fail to find the image 'Github.png'")
 }
-let md5: String? = path.fileDegist.md5
+let md5: String? = path.fileDigest.md5
 ```
 
 ## Installation
