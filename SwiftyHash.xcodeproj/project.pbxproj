@@ -41,7 +41,6 @@
 		A084FD2A1DAF5CDD00E38D59 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = CommonCrypto/module.modulemap; sourceTree = "<group>"; };
 		A084FD2B1DAF5D2E00E38D59 /* SwiftyHash.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyHash.podspec; sourceTree = "<group>"; };
 		A08CF8C71DAF74F9001CA0B5 /* FileHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHash.swift; path = Source/FileHash.swift; sourceTree = "<group>"; };
-		A0D21E4A1DB4B2F80054F9DB /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +75,6 @@
 		A084FD0F1DAF5C5D00E38D59 = {
 			isa = PBXGroup;
 			children = (
-				A0D21E4A1DB4B2F80054F9DB /* Package.swift */,
 				A084FD2B1DAF5D2E00E38D59 /* SwiftyHash.podspec */,
 				A084FD251DAF5C7900E38D59 /* Source */,
 				A084FD241DAF5C6B00E38D59 /* CommonCrypto */,

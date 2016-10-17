@@ -9,7 +9,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "MyKit",
+    name: "SwiftyHash",
     dependencies: [
         .Package(url: "https://github.com/anotheren/SwiftyHash.git",
                  majorVersion: 0)
