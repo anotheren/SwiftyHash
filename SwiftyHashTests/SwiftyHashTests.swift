@@ -46,8 +46,8 @@ class SwiftyHashTests: XCTestCase {
     }
     
     func testHashStringMD5() {
-        let result = "The quick brown fox jumps over the lazy dog".digest.md5
-        let expect = "9e107d9d372bb6826bd81d3542a419d6"
+        let result = "A Swifty wrapper for CommonCrypto".digest.md5
+        let expect = "6a0b4b4a2aba9abf25888a2709a9be35"
         XCTAssert(result == expect, "Fail to pass Hash.String.md5 Test, result = \(result), but expect \(expect)")
     }
 
@@ -66,8 +66,8 @@ class SwiftyHashTests: XCTestCase {
     }
     
     func testHashStringSHA1() {
-        let result = "The quick brown fox jumps over the lazy dog".digest.sha1
-        let expect = "2fd4e1c67a2d28fced849ee1bb76e7391b93eb12"
+        let result = "A Swifty wrapper for CommonCrypto".digest.sha1
+        let expect = "b4b842908da2d98d1aeeab9bd57be9b0c94ad6d1"
         XCTAssert(result == expect, "Fail to pass Hash.String.sha1 Test, result = \(result), but expect \(expect)")
     }
     
@@ -86,8 +86,8 @@ class SwiftyHashTests: XCTestCase {
     }
     
     func testHashStringSHA224() {
-        let result = "The quick brown fox jumps over the lazy dog".digest.sha224
-        let expect = "730e109bd7a8a32b1cb9d9a09aa2325d2430587ddbc0c38bad911525"
+        let result = "A Swifty wrapper for CommonCrypto".digest.sha224
+        let expect = "60d596cb5fddb2cd971302427cf704fab086bf2bda91f399a43621d0"
         XCTAssert(result == expect, "Fail to pass Hash.String.sha224 Test, result = \(result), but expect \(expect)")
     }
     
@@ -106,8 +106,8 @@ class SwiftyHashTests: XCTestCase {
     }
     
     func testHashStringSHA256() {
-        let result = "The quick brown fox jumps over the lazy dog".digest.sha256
-        let expect = "d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592"
+        let result = "A Swifty wrapper for CommonCrypto".digest.sha256
+        let expect = "0a319692d439882a6eaab2c2fcffbbf2d27194146b13d9c477e530034592352d"
         XCTAssert(result == expect, "Fail to pass Hash.String.sha256 Test, result = \(result), but expect \(expect)")
     }
     
@@ -126,8 +126,8 @@ class SwiftyHashTests: XCTestCase {
     }
     
     func testHashStringSHA384() {
-        let result = "The quick brown fox jumps over the lazy dog".digest.sha384
-        let expect = "ca737f1014a48f4c0b6dd43cb177b0afd9e5169367544c494011e3317dbf9a509cb1e5dc1e85a941bbee3d7f2afbc9b1"
+        let result = "A Swifty wrapper for CommonCrypto".digest.sha384
+        let expect = "a3fcfc988882426f111d91769eec4625e30462550b28e7ad3f50d754003857e8a0dfb5e99e65aefa976837000eb0003c"
         XCTAssert(result == expect, "Fail to pass Hash.String.sha384 Test, result = \(result), but expect \(expect)")
     }
     
@@ -146,8 +146,8 @@ class SwiftyHashTests: XCTestCase {
     }
     
     func testHashStringSHA512() {
-        let result = "The quick brown fox jumps over the lazy dog".digest.sha512
-        let expect = "07e547d9586f6a73f73fbac0435ed76951218fb7d0c8d788a309d785436bbb642e93a252a954f23912547d1e8a3b5ed6e1bfd7097821233fa0538f3db854fee6"
+        let result = "A Swifty wrapper for CommonCrypto".digest.sha512
+        let expect = "0fe48b141643328d8827a0c2d30f858f5649d6a4f2514e4b6271f104ea097ab2be1ac6753120de19eda1f479f99778047d79d6863e7ac089709dfd5594f01db0"
         XCTAssert(result == expect, "Fail to pass Hash.String.sha512 Test, result = \(result), but expect \(expect)")
     }
     
