@@ -36,7 +36,7 @@ let md5: String? = path.fileDigest.md5
 
 ### [CocoaPods](http://cocoapods.org)
 
-> CocoaPods 1.1.0+ is required to build SwiftyHash 0.2.0+.
+> CocoaPods 1.1.0+ is required to build SwiftyHash 0.3.0+.
 
 To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -46,7 +46,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'SwiftyHash', '~> 0.2'
+    pod 'SwiftyHash', '~> 0.3'
 end
 ```
 Then, run the following command:
