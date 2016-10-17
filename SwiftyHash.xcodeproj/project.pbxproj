@@ -183,7 +183,6 @@
 				TargetAttributes = {
 					A01B9DF11DB09F6500E895BE = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = VHE6LHRJMV;
 						ProvisioningStyle = Automatic;
 					};
 					A084FD181DAF5C5E00E38D59 = {
@@ -263,7 +262,8 @@
 		A01B9DFA1DB09F6500E895BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = VHE6LHRJMV;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftyHashTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.SwiftyHashTests;
@@ -275,7 +275,8 @@
 		A01B9DFB1DB09F6500E895BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = VHE6LHRJMV;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftyHashTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.SwiftyHashTests;
@@ -436,6 +437,7 @@
 				A01B9DFB1DB09F6500E895BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A084FD131DAF5C5D00E38D59 /* Build configuration list for PBXProject "SwiftyHash" */ = {
 			isa = XCConfigurationList;
