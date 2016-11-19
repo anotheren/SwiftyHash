@@ -4,9 +4,9 @@ SwiftyHash is a Swifty wrapper for CommonCrypto to easy use.
 
 ## Requirements
 
-* iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
-* Xcode 8.0+
-* Swift 3.0+
+* iOS 8.0+
+* Xcode 8.1+
+* Swift 3.0.1+
 
 ## Support
 
@@ -34,25 +34,21 @@ let md5: String? = path.fileDigest.md5
 
 ## Installation
 
-### [CocoaPods](http://cocoapods.org)
+### Carthage
 
-> CocoaPods 1.1.0+ is required to build SwiftyHash 0.3.0+.
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
 
-To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
-use_frameworks!
-
-target '<Your Target Name>' do
-    pod 'SwiftyHash', '~> 0.3'
-end
-```
-Then, run the following command:
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
 
 ```bash
-$ pod install
+$ brew update
+$ brew install carthage
+```
+
+To integrate SwiftyHash into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "anotheren/SwiftyHash" ~> 0.4.0
 ```
 
 ## License
