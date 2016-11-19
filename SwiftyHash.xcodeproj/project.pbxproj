@@ -38,8 +38,6 @@
 		A084FD1D1DAF5C5E00E38D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A084FD261DAF5CC400E38D59 /* FileHashContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHashContext.swift; path = Source/FileHashContext.swift; sourceTree = "<group>"; };
 		A084FD271DAF5CC400E38D59 /* HashType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashType.swift; path = Source/HashType.swift; sourceTree = "<group>"; };
-		A084FD2A1DAF5CDD00E38D59 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = CommonCrypto/module.modulemap; sourceTree = "<group>"; };
-		A084FD2B1DAF5D2E00E38D59 /* SwiftyHash.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftyHash.podspec; sourceTree = "<group>"; };
 		A08CF8C71DAF74F9001CA0B5 /* FileHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHash.swift; path = Source/FileHash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,9 +73,7 @@
 		A084FD0F1DAF5C5D00E38D59 = {
 			isa = PBXGroup;
 			children = (
-				A084FD2B1DAF5D2E00E38D59 /* SwiftyHash.podspec */,
 				A084FD251DAF5C7900E38D59 /* Source */,
-				A084FD241DAF5C6B00E38D59 /* CommonCrypto */,
 				A084FD1B1DAF5C5E00E38D59 /* SwiftyHash */,
 				A01B9DF31DB09F6500E895BE /* SwiftyHashTests */,
 				A084FD1A1DAF5C5E00E38D59 /* Products */,
@@ -100,14 +96,6 @@
 				A084FD1D1DAF5C5E00E38D59 /* Info.plist */,
 			);
 			path = SwiftyHash;
-			sourceTree = "<group>";
-		};
-		A084FD241DAF5C6B00E38D59 /* CommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				A084FD2A1DAF5CDD00E38D59 /* module.modulemap */,
-			);
-			name = CommonCrypto;
 			sourceTree = "<group>";
 		};
 		A084FD251DAF5C7900E38D59 /* Source */ = {
@@ -178,7 +166,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = anotheren.com;
 				TargetAttributes = {
 					A01B9DF11DB09F6500E895BE = {
@@ -303,6 +291,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -326,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -356,6 +345,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -373,7 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -400,7 +390,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.SwiftyHash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = " ${SRCROOT}/CommonCrypto";
+				SWIFT_INCLUDE_PATHS = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/SystemModule/CommonCrypto/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/SystemModule/CommonCrypto/iphonesimulator";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -422,7 +414,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.anotheren.SwiftyHash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = " ${SRCROOT}/CommonCrypto";
+				SWIFT_INCLUDE_PATHS = "";
+				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/SystemModule/CommonCrypto/iphoneos";
+				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = "$(SRCROOT)/SystemModule/CommonCrypto/iphonesimulator";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
