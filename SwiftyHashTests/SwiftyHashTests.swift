@@ -54,7 +54,7 @@ class SwiftyHashTests: XCTestCase {
     func testFilePathHashMD5() {
         let result = prepareTestPath().fileDigest.md5
         let expect = "f20f4adb92446d62197d300dc1a7d22e"
-        XCTAssert(result == expect, "Fail to pass FileHash.Path.md5 Test, result = \(result), but expect \(expect)")
+        XCTAssert(result == expect, "Fail to pass FileHash.Path.md5 Test, result = \(String(describing: result)), but expect \(expect)")
     }
     
     // MARK: sha1 test
@@ -74,7 +74,7 @@ class SwiftyHashTests: XCTestCase {
     func testFilePathHashSHA1() {
         let result = prepareTestPath().fileDigest.sha1
         let expect = "7e6087e1c2475a12882b4ff5b51600ecdca9db1f"
-        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha1 Test, result = \(result), but expect \(expect)")
+        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha1 Test, result = \(String(describing: result)), but expect \(expect)")
     }
     
     // MARK: sha224 test
@@ -94,7 +94,7 @@ class SwiftyHashTests: XCTestCase {
     func testFilePathHashSHA224() {
         let result = prepareTestPath().fileDigest.sha224
         let expect = "45025f33de02376cfe37072910256ce4c04b2bb625dd694182aa7acf"
-        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha224 Test, result = \(result), but expect \(expect)")
+        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha224 Test, result = \(String(describing: result)), but expect \(expect)")
     }
     
     // MARK: sha256 test
@@ -114,7 +114,7 @@ class SwiftyHashTests: XCTestCase {
     func testFilePathHashSHA256() {
         let result = prepareTestPath().fileDigest.sha256
         let expect = "95fb0d4c3478795a8763721bf48af1c90f7568a81642e6a0786532649bc5d235"
-        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha256 Test, result = \(result), but expect \(expect)")
+        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha256 Test, result = \(String(describing: result)), but expect \(expect)")
     }
     
     // MARK: sha384 test
@@ -134,7 +134,7 @@ class SwiftyHashTests: XCTestCase {
     func testFilePathHashSHA384() {
         let result = prepareTestPath().fileDigest.sha384
         let expect = "22a254281ebada4a371b78b1d9c51298dce9d501f4bdb192b14692c98530497223f728fb0b96c4d63648ad7361b801ba"
-        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha384 Test, result = \(result), but expect \(expect)")
+        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha384 Test, result = \(String(describing: result)), but expect \(expect)")
     }
     
     // MARK: sha512 test
@@ -154,6 +154,6 @@ class SwiftyHashTests: XCTestCase {
     func testFilePathHashSHA512() {
         let result = prepareTestPath().fileDigest.sha512
         let expect = "f7acaa3454bddcd90d4c4c2bc377d0a3ab73e5ff33bf6bc7d0f23d1b2062c5a0e409e819d2a87df146a1ea92cd636bb149d0bf61ace97e53cbd77a41b373948a"
-        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha512 Test, result = \(result), but expect \(expect)")
+        XCTAssert(result == expect, "Fail to pass FileHash.Path.sha512 Test, result = \(String(describing: result)), but expect \(expect)")
     }
 }
