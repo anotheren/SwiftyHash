@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftyHash"
-  s.version      = "0.6.0"
+  s.version      = "0.7.0"
   s.summary      = "A Swifty wrapper for CommonCrypto"
   s.homepage     = "https://github.com/anotheren/SwiftyHash"
   s.license      = { :type => "MIT" }
@@ -11,7 +11,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/anotheren/SwiftyHash.git",
                      :tag => s.version }
   s.source_files = "Source/*.swift"
-  s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/SwiftyHash/SystemModule/CommonCrypto/iphoneos/' }
-  s.preserve_paths = "SystemModule/CommonCrypto/iphoneos/module.modulemap"
+  s.preserve_paths = "SystemModule/CommonCrypto"
+  s.pod_target_xcconfig = {
+    'SWIFT_INCLUDE_PATHS[sdk=iphoneos*]'         => '$(PODS_ROOT)/SwiftyHash/SystemModule/CommonCrypto/iphoneos',
+    'SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]'  => '$(PODS_ROOT)/SwiftyHash/SystemModule/CommonCrypto/iphonesimulator',
+  }
 
 end
