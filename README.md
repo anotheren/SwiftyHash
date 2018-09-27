@@ -5,8 +5,10 @@ SwiftyHash is a Swifty wrapper for CommonCrypto to easy use.
 ## Requirements
 
 * iOS 8.0+
-* Xcode 8.3+
-* Swift 3.1+
+* Xcode 10
+* Swift 4.2
+
+NOTE: For Swift 3.1+ support use version 0.7.
 
 ## Support
 
@@ -48,7 +50,7 @@ $ brew install carthage
 To integrate SwiftyHash into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "anotheren/SwiftyHash" ~> 0.5.0
+github "anotheren/SwiftyHash" ~> 0.8.0
 ```
 
 ## License
