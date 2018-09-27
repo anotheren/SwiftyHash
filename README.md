@@ -50,7 +50,7 @@ $ brew install carthage
 To integrate SwiftyHash into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "anotheren/SwiftyHash" ~> 0.8.0
+github "anotheren/SwiftyHash" ~> 1.0
 ```
 
 ## License

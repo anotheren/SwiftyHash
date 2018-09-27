@@ -37,6 +37,7 @@
 		A084FD261DAF5CC400E38D59 /* FileHashContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHashContext.swift; path = Source/FileHashContext.swift; sourceTree = "<group>"; };
 		A084FD271DAF5CC400E38D59 /* HashType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashType.swift; path = Source/HashType.swift; sourceTree = "<group>"; };
 		A08CF8C71DAF74F9001CA0B5 /* FileHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileHash.swift; path = Source/FileHash.swift; sourceTree = "<group>"; };
+		A0E273CE215D0D52002EE174 /* SwiftyHash.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftyHash.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		A084FD0F1DAF5C5D00E38D59 = {
 			isa = PBXGroup;
 			children = (
+				A0E273CE215D0D52002EE174 /* SwiftyHash.podspec */,
 				A084FD251DAF5C7900E38D59 /* Source */,
 				A084FD1B1DAF5C5E00E38D59 /* SwiftyHash */,
 				A01B9DF31DB09F6500E895BE /* SwiftyHashTests */,
